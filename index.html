@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,500italic,700,700bold">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chonburi">
+
+<style>
+    
+    a:link, a:active, a:visited {
+    color: #ffeac8;
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+a:hover{
+    color:#ffeac8;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+ 
+}
+    
+    .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:80px;
+        font-family: 'Chonburi', cursive;
+        text-transform:uppercase;
+        color:#ffeac8;
+        text-shadow: 2px 2px 10px #595959;
+
+    }
+    
+    .subtitle {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:24px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        text-transform:uppercase;
+        font-style:italic;
+        color:#ffeac8;
+        text-shadow: 2px 2px 10px #595959;
+    }
+    
+    .headerlink {
+        position: absolute;
+        top: 69%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size:24px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        text-transform:uppercase;
+        color:#ffeac8;
+        padding:10px 90px ;
+        border:3px solid #ffeac8;
+        box-shadow: 2px 2px 10px #595959;
+        background-color:transparent;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            -ms-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+    }
+    
+    .headerlink a {
+        background:transparent;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    
+    .headerlink a:hover {
+        background-color:transparent;
+        color:#ffeac8;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        
+    }
+    
+    #shopcontainer {
+        width:auto;
+        text-align:center;
+        padding:10px;
+        
+    }
+    
+    
+    .popup_block{
+        width:900px;
+        height:460px;
+    display:none;
+    background:#ffffff;
+    padding:20px;
+    font-size:18px;
+    font-family:'Roboto';
+    font-weight:300;
+    float:left;
+    position:fixed;
+    top:50%;left:50%;
+    z-index: 99999;
+    overflow-y:hidden;
+     overflow-x:hidden;
+}
+ 
+*html #fade {position: absolute;}
+*html .popup_block {position: absolute;}
+#fade {
+    display:none;
+    position:fixed;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:9999;
+    background:#000; /* change to #fff for solid white */
+    opacity:0.3; /* change to opacity:1; */
+}
+
+#popuptext {
+   width:475px;
+   margin-left:420px;
+   text-align:right;
+}
+
+#popupimage {
+   margin-left:0px;
+   position:absolute;
+}
+
+#popupimage img{
+   max-width:380px;
+}
+
+#popupheader1 {
+    font-family: 'Chonburi', cursive;
+    color:#2b6684;
+    font-size:40px;
+    text-transform:uppercase;
+}
+
+#popupheader2 {
+    font-family: 'Chonburi', cursive;
+    color:#e09d30;
+    font-size:40px;
+    text-transform:uppercase;
+}
+
+#popupheader3 {
+    font-family: 'Chonburi', cursive;
+    color:#546747;
+    font-size:40px;
+    text-transform:uppercase;
+}
+    
+    
+</style>
+    
+</head>
+<body>
+
+    <img class="mySlides" src="https://i.imgur.com/xmajYZ0.jpg" style="width:100%">
+    <img class="mySlides" src="https://i.imgur.com/iLo2JVs.jpg" style="width:100%">
+    <img class="mySlides" src="https://i.imgur.com/Rgg6dID.jpg" style="width:100%">
+    
+      <div class="title">Soda Bee</div>
+      <div class="subtitle">All natural honey sweetened soda</div>
+      
+      <div class="headerlink"><a href="/">Shop Now</a></div>
+      
+      
+    <div id="shopcontainer">
+        
+            <a href="#?w=900" rel="box1" class="poplight"><img src="https://i.imgur.com/kxkjxNR.png" alt="blue" style="width:25%;padding:20px 20px;"></a>
+            
+            <a href="#?w=900" rel="box2" class="poplight"><img src="https://i.imgur.com/oFJWtEn.png" alt="yellow" style="width:25%;padding:20px 20px;"></a>
+            
+            <a href="#?w=900" rel="box3" class="poplight"><img src="https://i.imgur.com/BGNRXdV.png" alt="green" style="width:25%;padding:20px 20px;" ></a>
+
+
+        
+            
+       
+            
+    </div>
+    
+    
+    <div id="box1" class="popup_block">
+        
+        <div id="popupimage"><img src="https://i.imgur.com/kxkjxNR.png"></div>
+        
+        <div id="popuptext">
+            <div id="popupheader1">Blackberry Lime</div>
+            <br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat lorem rutrum ipsum ultricies, sit amet sodales sem sollicitudin. Sed leo sem, congue id convallis vitae, pulvinar mollis mi. Vivamus vestibulum massa pellentesque congue facilisis. Proin ut tempus dolor. In hac habitasse platea dictumst. Pellentesque lacus metus, congue non velit ut, ornare fringilla velit. Praesent dignissim consectetur vulputate. Vestibulum posuere sed metus nec iaculis. Phasellus egestas tincidunt ante, a laoreet sapien ornare vel. Mauris malesuada nunc non dolor ultrices commodo. Fusce viverra eleifend enim, at tempus est volutpat sodales. Praesent ornare arcu felis, sit amet imperdiet lorem ornare tincidunt. Nullam ullamcorper tincidunt nulla. Nunc nisi est, pharetra congue dictum sed, viverra sit amet ante. In pharetra vulputate dolor vitae tristique.
+            </div>
+        
+    </div>
+    
+    <div id="box2" class="popup_block">
+        
+        <div id="popupimage"><img src="https://i.imgur.com/oFJWtEn.png"></div>
+        
+        <div id="popuptext">
+            <div id="popupheader2">Sweet Honey</div>
+            <br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat lorem rutrum ipsum ultricies, sit amet sodales sem sollicitudin. Sed leo sem, congue id convallis vitae, pulvinar mollis mi. Vivamus vestibulum massa pellentesque congue facilisis. Proin ut tempus dolor. In hac habitasse platea dictumst. Pellentesque lacus metus, congue non velit ut, ornare fringilla velit. Praesent dignissim consectetur vulputate. Vestibulum posuere sed metus nec iaculis. Phasellus egestas tincidunt ante, a laoreet sapien ornare vel. Mauris malesuada nunc non dolor ultrices commodo. Fusce viverra eleifend enim, at tempus est volutpat sodales. Praesent ornare arcu felis, sit amet imperdiet lorem ornare tincidunt. Nullam ullamcorper tincidunt nulla. Nunc nisi est, pharetra congue dictum sed, viverra sit amet ante. In pharetra vulputate dolor vitae tristique.
+            </div>
+        
+    </div>
+    
+    <div id="box3" class="popup_block">
+        
+        <div id="popupimage"><img src="https://i.imgur.com/BGNRXdV.png"></div>
+        
+        <div id="popuptext">
+            <div id="popupheader3">Lemon Mint</div>
+            <br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat lorem rutrum ipsum ultricies, sit amet sodales sem sollicitudin. Sed leo sem, congue id convallis vitae, pulvinar mollis mi. Vivamus vestibulum massa pellentesque congue facilisis. Proin ut tempus dolor. In hac habitasse platea dictumst. Pellentesque lacus metus, congue non velit ut, ornare fringilla velit. Praesent dignissim consectetur vulputate. Vestibulum posuere sed metus nec iaculis. Phasellus egestas tincidunt ante, a laoreet sapien ornare vel. Mauris malesuada nunc non dolor ultrices commodo. Fusce viverra eleifend enim, at tempus est volutpat sodales. Praesent ornare arcu felis, sit amet imperdiet lorem ornare tincidunt. Nullam ullamcorper tincidunt nulla. Nunc nisi est, pharetra congue dictum sed, viverra sit amet ante. In pharetra vulputate dolor vitae tristique.
+            </div>
+        
+    </div>
+ 
+</div></div></div></div></div></div></div></div></div></div>
+
+
+
+</body>
+
+    <script>
+        var slideIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > x.length) {slideIndex = 1}
+      x[slideIndex-1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+    
+    <script type="text/javascript"
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+//
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); //Get Popup Name
+var popURL = $(this).attr('href'); //Get Popup href to define size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+//Apply Margin to Popup
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); //fade them both out
+});
+return false;
+});
+});
+</script>
+
+</html>
