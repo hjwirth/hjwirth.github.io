@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    
+    <style>
+        
+        body {
+          font-family:'Montserrat';
+          font-size:20px;
+          color:#333333;
+        }
+        
+    html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+            a:link, a:active, a:visited {
+    color: #eeeeee;
+    text-decoration: none;
+    outline: none;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+ 
+a:hover{
+    color:#ffffff;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+ 
+}
+        
+        .header {
+          padding: 248px;
+          text-align: center;
+          background: #BBBBBB;
+          color: white;
+        }
+        
+        #title {
+            color:#eeeeee;
+            font-family:'Playfair Display';
+            font-size:80px;
+            text-transform:uppercase;
+            font-style:italic;
+        }
+        
+        #subtitle {
+            color:#eeeeee;
+            font-family:'Montserrat';
+            font-size:30px;
+            text-transform:uppercase;
+        }
+        
+        #toplink {
+            width:300px;
+            color:#eeeeee;
+            font-family:'Montserrat';
+            font-size:30px;
+            font-style:italic;
+            text-transform:uppercase;
+            border:2px solid #eeeeee;
+            border-radius:10px;
+            padding:15px;
+            display:inline-block;
+        }
+        
+        #content {
+            font-family:'Montserrat';
+            font-size:20px;
+            padding:50px;
+        }       
+
+.flex-parent {
+  display: flex;
+}
+.flex-child {
+  flex: 1;
+}
+
+    #box {
+      padding: 135px;
+      text-align: center;
+      background: #BBBBBB;
+      color: white;
+    }
+    
+    #textbox {
+      padding:10px;
+      text-align: justify;
+      background: transparent;
+      color: #333333;
+    }
+    
+    #boxheader {
+      color:#eeeeee;
+      font-family:'Playfair Display';
+      font-size:65px;
+      text-transform:uppercase;
+      font-style:italic;
+    }
+    
+    #bannertitle {
+      color:#BBBBBB;
+      text-align:center;
+      font-family:'Playfair Display';
+      font-size:80px;
+      text-transform:uppercase;
+      font-style:italic;
+    }
+    
+    #worktitle {
+      color:#eeeeee;
+      text-align:center;
+      padding-top:170px;
+      font-family:'Playfair Display';
+      font-size:40px;
+      text-transform:uppercase;
+      font-style:italic;
+    }
+    
+    
+    #container {
+    display: table;
+    width: 98.5%;
+    background: #fff;
+    padding:10px;
+}
+#container > div {
+    display: table-cell;
+    padding: 1em;
+    width: 33.33%;
+    height:400px;
+    background:#BBBBBB;
+}
+#container > div:nth-child(2) {
+    width: 33.33%;
+    background: #BBBBBB;
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  width:300px;
+  background-color: transparent;
+  color: #eeeeee;
+  font-family:'Montserrat';
+  padding: 16px;
+  font-size: 30px;
+  text-transform:uppercase;
+  border: 2px solid #eeeeee;
+  border-radius:10px;
+  padding:15px;
+  font-style:italic;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: transparent;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  width:268px;
+  font-size:25px;
+  text-transform:uppercase;
+  color: #eeeeee;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: transparent;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+
+table {
+  width:100%;
+  
+}
+
+
+
+
+th {
+  padding: 15px;
+  text-align: center;
+  text-transform:uppercase;
+  font-family:'Montserrat';
+  color:#BBBBBB;
+  font-size:20px;
+}
+
+td {
+  padding:8px;
+  text-align:center;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #BBBBBB;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dothol {
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border-radius: 50%;
+  border:2px solid #BBBBBB;
+  display: inline-block;
+}
+
+h2 {
+  text-transform:uppercase;
+  font-family:'Montserrat';
+  color:#BBBBBB;
+  font-size:20px;
+}
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div id="title">Hannah Wirth</div>
+        <div id="subtitle">Web Development & Graphic Design</div>
+        <br>
+
+       <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Explore</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#worksec">Work</a>
+            <a href="#skillssec">Skills</a>
+    </div>
+</div>
+        
+    </div>
+
+
+
+<br><br><br>
+
+<div id="worksec">
+<div id="bannertitle">Work</div>
+<br><br><br>
+
+<div id="container">
+    <div>
+        <div id="worktitle"><a href="/">Web Projects</a></div>
+    </div>
+    &nbsp;
+    <div>
+        <div id="worktitle"><a href="/">Graphic Design</a></div>
+    </div>
+    &nbsp;
+    <div>
+        <div id="worktitle"><a href="/">Artwork</a></div>
+    </div>
+</div>
+</div>
+
+
+
+
+
+<br><br><br><br><br>
+
+<div id="skillssec">
+<div id="bannertitle">Skills</div>
+<br><br><br>
+    
+<div class='parent flex-parent'>
+  <div class='child flex-child'>
+      <div id="box">
+        <div id="boxheader">Overview</div>
+      </div>
+  </div>
+  
+  
+  <div class='child flex-child'>
+      <div id="textbox">
+        
+        
+  <table>
+  <tr>
+    <th>Code</th> 
+    <th>Design</th>
+    <th>Illustration</th>
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+     
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+  
+    <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+    
+      <tr>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+</table>
+        
+        
+      </div>
+  </div>
+</div>
+
+<div class='parent flex-parent'>
+  <div class='child flex-child'>
+      <div id="textbox">
+        
+        
+  <br><br>
+  
+         <table>
+  <tr>
+    <th>HTML</th> 
+    <th>CSS</th>
+    <th>Javascript</th>
+    <th>PHP</th>
+    <th>MySQL</th>
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td></td>
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+  
+    <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+    
+  </tr>
+    
+      <tr>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+    
+  </tr>
+</table>
+        
+      </div>
+  </div>
+  
+    <div class='child flex-child'>
+      <div id="box">
+        <div id="boxheader">Programming Languages</div>
+      </div>
+  </div>
+</div>
+
+<div class='parent flex-parent'>
+  <div class='child flex-child'>
+      <div id="box">
+        <div id="boxheader">Graphic Design</div>
+      </div>
+  </div>
+  
+  
+  <div class='child flex-child'>
+      <div id="textbox">
+
+<br><br>
+
+    <table>
+  <tr>
+    <th>Photoshop</th> 
+    <th>Illustrator</th>
+    <th>InDesign</th>
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+     
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+  
+    <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+  </tr>
+    
+  <tr>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+    <td><span class="dothol"></span></td>
+  </tr>
+</table>
+    
+    
+
+      </div>
+  </div>
+</div>
+
+
+<div class='parent flex-parent'>
+  <div class='child flex-child'>
+      <div id="textbox">
+        
+        <br><br>
+
+<table>
+  <tr>
+    <th>Procreate</th> 
+    <th>Photoshop</th>
+
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+ 
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+
+  </tr>
+  <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+  
+    <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dot"></span></td>
+  </tr>
+    
+      <tr>
+    <td><span class="dot"></span></td>
+    <td><span class="dothol"></span></td>
+  </tr>
+</table>
+
+      </div>
+  </div>
+  
+    <div class='child flex-child'>
+      <div id="box">
+        <div id="boxheader">Digital Illustration</div>
+      </div>
+  </div>
+</div>
+
+
+
+</div>
+
+</body>
+
+  <script>
+    function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+
+</html>
