@@ -220,6 +220,7 @@ th {
   padding: 15px;
   text-align: center;
   text-transform:uppercase;
+  font-weight:none;
   font-family:'Montserrat';
   color:#BBBBBB;
   font-size:20px;
@@ -253,49 +254,58 @@ h2 {
   color:#BBBBBB;
   font-size:20px;
 }
-
-
-    .popup_block{
-        width:1400px;
-        height:660px;
-    display:none;
-    background:#ffffff;
-    padding:5px;
-    font-size:18px;
-    font-family:'Montserrat';
-    float:left;
-    position:fixed;
-    top:52%;left:52%;
-    z-index: 99999;
-    overflow-y:hidden;
-     overflow-x:hidden;
-}
- 
-*html #fade {position: absolute;}
-*html .popup_block {position: absolute;}
-#fade {
-    display:none;
-    position:fixed;
-    left:0px;
-    top:0px;
-    width:100%;
-    height:100%;
-    z-index:9999;
-    background:#000; /* change to #fff for solid white */
-    opacity:0.2; /* change to opacity:1; */
+  
+  .hidden {
+  display: none;  
 }
 
-  #popupheader {
-      color:#eeeeee;
-      text-align:center;
-      padding:20px;
-      background-color:#BBBBBB;
-      font-family:'Playfair Display';
-      font-size:40px;
-      text-transform:uppercase;
-      font-style:italic;
-  }
-        
+#spoiler-button {
+  padding-top:170px;
+  font-size: 40px;
+  color: #eeeeee;
+  font-family:'Playfair Display';
+  font-style:italic;
+  text-transform:uppercase;
+  background: transparent;
+  border: none;
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#spoiler-button:hover {
+  background: transparent;
+  color:#ffffff;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#spoiler-content {
+  padding:20px;
+}
+
+#spoiler-content2 {
+  padding:20px;
+}
+
+#spoiler-content3 {
+  padding:20px;
+}
+
+footer {
+  background-color:#BBBBBB;
+  padding:10px;
+  color:#eeeeee;
+  text-align:center;
+}
+   
+           
         
     </style>
 </head>
@@ -326,24 +336,30 @@ h2 {
 
 <div id="container">
     <div>
-        <div id="worktitle"><a href="#?w=900" rel="box1" class="poplight">Web Projects</a></div>
+        <center><button name="spoiler-button" id="spoiler-button" type="button" onclick="document.getElementById('spoiler-content').classList.toggle('hidden');">Web Projects</button></center>
     </div>
     &nbsp;
     <div>
-        <div id="worktitle"><a href="#?w=900" rel="box2" class="poplight">Graphic Design</a></div>
+        <center><button name="spoiler-button" id="spoiler-button" type="button" onclick="document.getElementById('spoiler-content2').classList.toggle('hidden');">Graphic Design</button></center>
     </div>
     &nbsp;
     <div>
-        <div id="worktitle"><a href="#?w=900" rel="box3" class="poplight">Artwork</a></div>
+        <center><button name="spoiler-button" id="spoiler-button" type="button" onclick="document.getElementById('spoiler-content3').classList.toggle('hidden');">Artwork</button></center>
+
     </div>
 </div>
 </div>
 
+    <p id="spoiler-content"class="spoiler-content hidden">Shiver me timbers, you found me pot of gold!</p>
+
+    <p id="spoiler-content2"class="spoiler-content2 hidden">Shiver me timbers, you found me pot of gold 2!</p>
+        
+    <p id="spoiler-content3"class="spoiler-content3 hidden">Shiver me timbers, you found me pot of gold 3!</p>
 
 
 
 
-<br><br><br><br><br>
+<br><br>
 
 <div id="skillssec">
 <div id="bannertitle">Skills</div>
@@ -575,31 +591,11 @@ h2 {
 
 </div>
 
+<br><br>
 
-<div id="box1" class="popup_block">
-
-    <div id="popupheader">Web Projects</div>
-
-</div>
-
-<div id="box2" class="popup_block">
-
-    <div id="popupheader">Graphic Design</div>
-
-</div>
-
-<div id="box3" class="popup_block">
-
-    <div id="popupheader">Artwork</div>
-
-</div>
- 
-</div></div></div></div></div></div></div></div></div></div>
-
-
-
-
-
+<footer>
+  <p>&#169; 2021, HANNAH WIRTH</p>
+</footer>
 
 
 
@@ -625,38 +621,6 @@ window.onclick = function(event) {
 }
   </script>
   
-  
-  <script type="text/javascript"
-src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-//
-$('a.poplight[href^=#]').click(function() {
-var popID = $(this).attr('rel'); //Get Popup Name
-var popURL = $(this).attr('href'); //Get Popup href to define size
-var query= popURL.split('?');
-var dim= query[1].split('&');
-var popWidth = dim[0].split('=')[1]; //Gets the first query string value
-$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
-var popMargTop = ($('#' + popID).height() + 80) / 2;
-var popMargLeft = ($('#' + popID).width() + 80) / 2;
-//Apply Margin to Popup
-$('#' + popID).css({
-'margin-top' : -popMargTop,
-'margin-left' : -popMargLeft
-});
-$('body').append('<div id="fade"></div>');
-$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer - .css({'filter' : 'alpha(opacity=80)'})
-return false;
-});
-$('a.close, #fade').live('click', function() {
-$('#fade , .popup_block').fadeOut(function() {
-$('#fade, a.close').remove(); //fade them both out
-});
-return false;
-});
-});
-</script>
   
   
 
